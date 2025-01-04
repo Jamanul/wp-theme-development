@@ -18,14 +18,21 @@ function skb_css_js_file_calling()
     wp_enqueue_script("main", get_template_directory_uri() . "/js/main.js", [], "1.0.0", true);
 }
 add_action("wp_enqueue_scripts", "skb_css_js_file_calling");
+// Google Fonts Enqueue
+function skb_add_google_fonts()
+{
+    wp_enqueue_style("skb_google_fonts", "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+}
+add_action("wp_enqueue_scripts", "skb_add_google_fonts");
 // theme customization
 /*
     sakib is Text Domain
-*/ 
-function skb_customize_register($wp_customize) {
+*/
+function skb_customize_register($wp_customize)
+{
     // Add a new section for the header area
     $wp_customize->add_section('skb_header_area', array(
-        'title'       => __('Header Area', 'sakib'),
+        'title' => __('Header Area', 'sakib'),
         'description' => __('If you are interested, you can change the header logo here.', 'sakib'),
     ));
 
@@ -36,10 +43,13 @@ function skb_customize_register($wp_customize) {
 
     // Add a control for uploading the logo
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'skb_logo', array(
-        'label'       => __('Logo Upload', 'sakib'),
+        'label' => __('Logo Upload', 'sakib'),
         'description' => __('Upload a logo for the header area. If you are interested, you can change it here.', 'sakib'),
-        'setting'     => 'skb_logo',
-        'section'     => 'skb_header_area',
+        'setting' => 'skb_logo',
+        'section' => 'skb_header_area',
     )));
 }
 add_action('customize_register', 'skb_customize_register');
+// menu register
+
+register_nav_menu("main_menu", __("main menu", "sakib"));

@@ -19,23 +19,7 @@
                 </div>
                 <div class="col-md-9">
                     <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a>
-                                <ul>
-                                    <li><a href="#">Our Team</a></li>
-                                    <li><a href="#">Mission</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Services</a>
-                                <ul>
-                                    <li><a href="#">Web Design</a></li>
-                                    <li><a href="#">SEO</a></li>
-                                    <li><a href="#">Marketing</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
+                        <?php wp_nav_menu(array("theme_location" => "main_menu", "menu_id" => "nav")) ?>
                     </nav>
                 </div>
             </div>
