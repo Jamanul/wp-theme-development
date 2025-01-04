@@ -1,0 +1,66 @@
+img {
+    width: 100% !important;
+}
+.logo{
+    width: 50% !important;
+}
+body {
+    background: #000 !important;
+    color: white;
+}
+
+/* Main Navigation Styling */
+
+
+/* Styling for the top-level menu items */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;  /* Flexbox layout for horizontal menu */
+}
+
+/* Styling for each list item (menu item) */
+nav ul li {
+    position: relative;
+}
+
+/* Styling for the anchor tags (menu links) */
+nav a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Hover effect for main menu items */
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Hidden submenu (dropdown) */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;  /* Align dropdown below parent */
+    left: 0;
+    background-color: #333;
+    min-width: 200px;
+    z-index: 999; /* Ensures dropdown appears above other content */
+}
+
+/* Show dropdown when hovering over the parent item */
+nav ul li:hover > ul {
+    display: block;
+}
+
+/* Styling for dropdown menu items */
+nav ul li ul li a {
+    padding: 10px;
+    color: #ddd;
+}
+
+/* Hover effect for dropdown items */
+nav ul li ul li a:hover {
+    background-color: #444;
+}
