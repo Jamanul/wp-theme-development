@@ -48,6 +48,26 @@ function skb_customize_register($wp_customize)
         'setting' => 'skb_logo',
         'section' => 'skb_header_area',
     )));
+    // menu position
+    $wp_customize->add_section("skb_menu_options", array(
+        "title" => __("menu position option", "sakib"),
+        'description' => __('If you are interested, you can change the menu position here.', 'sakib'),
+    ));
+    $wp_customize->add_setting('skb_menu_position', array(
+        "default" => "right_menu",
+    ));
+    $wp_customize->add_control("skb_menu_position", array(
+        'label' => "menu position",
+        'description' => __('If you are interested, you can change the menu position here.', 'sakib'),
+        "setting" => "skb_menu_position",
+        "section" => "skb_menu_options",
+        "type" => "radio",
+        "choices" => array(
+            "left_menu" => __("left menu", "sakib"),
+            "center_menu" => __("center menu", "sakib"),
+            "right_menu" => __("right menu", "sakib"),
+        )
+    ));
 }
 add_action('customize_register', 'skb_customize_register');
 // menu register
