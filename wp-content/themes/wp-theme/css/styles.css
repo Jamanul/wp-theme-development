@@ -5,8 +5,6 @@ img {
     width: 50% !important;
 }
 body {
-    background: #000 !important;
-    color: white;
     font-family: "Roboto", serif !important;
 }
 
@@ -29,7 +27,7 @@ nav ul li {
 /* Styling for the anchor tags (menu links) */
 nav a {
     display: block;
-    color: white;
+    color: black;
     padding: 14px 20px;
     text-decoration: none;
 }
@@ -86,4 +84,17 @@ nav ul li ul li a:hover {
 }
 #header_area.left_menu .col-md-9 .ul {
     text-align: center;
+}
+
+#footer_section {
+    background-color: #333 !important; /* Dark background color for the footer */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Add padding for spacing */
+    text-align: center; /* Center-align the content */
+}
+
+#footer_section p {
+    font-size: 16px; /* Set the font size */
+    margin: 0; /* Remove margin for a clean look */
+    font-family: 'Arial', sans-serif; /* Set a font family */
 }

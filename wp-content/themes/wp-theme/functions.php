@@ -68,6 +68,20 @@ function skb_customize_register($wp_customize)
             "right_menu" => __("right menu", "sakib"),
         )
     ));
+    // footer section
+    $wp_customize->add_section("skb_footer_section", array(
+        "title" => __("footer section", "sakib"),
+        'description' => __('If you are interested, you can change the footer here.', 'sakib'),
+    ));
+    $wp_customize->add_setting("skb_footer_add", array(
+        "default" => "&copy; Copyright | skb",
+    ));
+    $wp_customize->add_control("skb_footer_add", array(
+        "label" => "footer",
+        'description' => __('If you are interested, you can change the footer here.', 'sakib'),
+        'setting' => 'skb_footer_add',
+        'section' => 'skb_footer_section',
+    ));
 }
 add_action('customize_register', 'skb_customize_register');
 // menu register
