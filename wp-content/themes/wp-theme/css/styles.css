@@ -126,3 +126,64 @@ nav ul li ul li a:hover {
     background-color: rgb(105, 57, 48); /* Darker background on hover */
     transform: translateY(-3px); /* Slight upward movement on hover */
 }
+
+/* Pagination Container */
+.wp_pagenav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Pagination Links */
+.wp_pagenav a,
+.wp_pagenav span {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: tomato; /* Tomato color for background */
+    color: white; /* White text */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Pagination Links */
+.wp_pagenav a:hover,
+.wp_pagenav span.current {
+    background-color: darkred; /* Darker tomato color on hover */
+    cursor: pointer;
+    transform: translateY(-3px); /* Slight upward movement on hover */
+}
+
+/* Previous & Next Button Styling */
+.wp_pagenav .prev,
+.wp_pagenav .next {
+    background-color: tomato;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.wp_pagenav .prev:hover,
+.wp_pagenav .next:hover {
+    background-color: darkred;
+}
+
+/* Page Number Styling */
+.wp_pagenav .pages {
+    font-size: 14px;
+    margin: 10px 0;
+    color: tomato; /* Tomato color for page number text */
+}
+
+.wp_pagenav .pages span {
+    font-weight: bold;
+}
+
+/* Styling for Active Pagination Link */
+.wp_pagenav .current {
+    background-color: darkred; /* Dark tomato for the current page */
+    cursor: default;
+}
