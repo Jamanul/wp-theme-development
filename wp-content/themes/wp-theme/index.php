@@ -31,6 +31,14 @@ get_header();
                         _e("No posts found");
                     endif;
                     ?>
+                    <div id="page_nav">
+                        <?php if ('skb_pagenav') {
+                            skb_pageNav();
+                        } else { ?>
+                            <?php next_post_link(); ?>
+                            <?php previous_post_link(); ?>
+                        <?php } ?>
+                    </div>
                 </div>
                 <div class="col-md-3">
                     <h2>this is sidebar</h2>

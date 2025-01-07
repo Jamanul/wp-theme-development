@@ -123,6 +123,6 @@ nav ul li ul li a:hover {
 }
 
 .read_more:hover {
-    background-color: tomato; /* Darker background on hover */
+    background-color: rgb(105, 57, 48); /* Darker background on hover */
     transform: translateY(-3px); /* Slight upward movement on hover */
 }
