@@ -1,16 +1,13 @@
 <?php
 /**
- * My theme function
+ * My theme functions.php
  */
 
-// theme title
-include_once('./inc/default.php');
-// theme css and jquery calling
-include_once('./inc/enqueue.php');
-// theme customization
-/*
-    sakib is Text Domain
-*/
-include_once('./inc/theme_function.php');
-// menu register
-include_once('./inc/menu_register.php');
+// Include theme setup files
+include_once(get_template_directory() . '/inc/default.php');  // Theme title and setup
+include_once(get_template_directory() . '/inc/enqueue.php');  // CSS and JS enqueuing
+include_once(get_template_directory() . '/inc/theme_function.php');  // Theme customization functions
+include_once(get_template_directory() . '/inc/menu_register.php');  // Menu registration
+
+
+

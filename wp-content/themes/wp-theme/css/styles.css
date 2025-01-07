@@ -98,3 +98,31 @@ nav ul li ul li a:hover {
     margin: 0; /* Remove margin for a clean look */
     font-family: 'Arial', sans-serif; /* Set a font family */
 }
+
+.blog_area{
+    padding: 20px 0px ;
+}
+#body_area .blog_area .post-title a{
+    color: #262626;
+    text-decoration: none;
+    transition: color 1s ease;
+}
+#body_area .blog_area .post-title a:hover{
+    color: tomato;
+}
+
+.read_more {
+    display: inline-block;
+    background-color: tomato; /* Button background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around the button */
+    font-size: 16px; /* Font size */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition on hover */
+}
+
+.read_more:hover {
+    background-color: tomato; /* Darker background on hover */
+    transform: translateY(-3px); /* Slight upward movement on hover */
+}
