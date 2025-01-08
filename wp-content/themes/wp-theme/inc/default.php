@@ -5,7 +5,7 @@ add_theme_support("title-tag");
 // add_theme_support("post_thumbnails", array('page', 'post'));
 // add_image_size("custom_post_thumbnail", 970, 350, true);
 // Enable featured images for posts and pages
-add_theme_support("post_thumbnails", array('post', 'page'));
+add_theme_support("post-thumbnails", array('post', 'page', 'service'));
 
 // Define custom image size (optional, based on your needs)
 add_image_size("custom_post_thumbnail", 970, 350, true);

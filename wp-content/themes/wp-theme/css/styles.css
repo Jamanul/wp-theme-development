@@ -205,3 +205,14 @@ nav ul li ul li a:hover {
     justify-content: center !important;
     min-height: 75vh;
 }
+
+#service_area{
+    padding: 45px 0px;
+}
+#service_area .service-content {
+    background-color: #ddd;
+    box-shadow: 0 0 10px #ddd;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 10px;
+}
