@@ -1,3 +1,6 @@
+:root {
+    --primary: tomato;
+}
 img {
     width: 100% !important;
 }
@@ -108,12 +111,12 @@ nav ul li ul li a:hover {
     transition: color 1s ease;
 }
 #body_area .blog_area .post-title a:hover{
-    color: tomato;
+    color: var(--primary);
 }
 
 .read_more {
     display: inline-block;
-    background-color: tomato; /* Button background color */
+    background-color: var(--primary); /* Button background color */
     color: white; /* Text color */
     padding: 10px 20px; /* Padding around the button */
     font-size: 16px; /* Font size */
@@ -141,7 +144,7 @@ nav ul li ul li a:hover {
     display: inline-block;
     padding: 10px 20px;
     margin: 0 5px;
-    background-color: tomato; /* Tomato color for background */
+    background-color: var(--primary); /* var(--primary) color for background */
     color: white; /* White text */
     text-decoration: none;
     border-radius: 5px; /* Rounded corners */
@@ -151,7 +154,7 @@ nav ul li ul li a:hover {
 /* Hover Effect for Pagination Links */
 .wp_pagenav a:hover,
 .wp_pagenav span.current {
-    background-color: darkred; /* Darker tomato color on hover */
+    background-color: darkred; /* Darker var(--primary) color on hover */
     cursor: pointer;
     transform: translateY(-3px); /* Slight upward movement on hover */
 }
@@ -159,7 +162,7 @@ nav ul li ul li a:hover {
 /* Previous & Next Button Styling */
 .wp_pagenav .prev,
 .wp_pagenav .next {
-    background-color: tomato;
+    background-color: var(--primary);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -175,7 +178,7 @@ nav ul li ul li a:hover {
 .wp_pagenav .pages {
     font-size: 14px;
     margin: 10px 0;
-    color: tomato; /* Tomato color for page number text */
+    color: var(--primary); /* var(--primary) color for page number text */
 }
 
 .wp_pagenav .pages span {
@@ -184,6 +187,21 @@ nav ul li ul li a:hover {
 
 /* Styling for Active Pagination Link */
 .wp_pagenav .current {
-    background-color: darkred; /* Dark tomato for the current page */
+    background-color: darkred; /* Dark var(--primary) for the current page */
     cursor: default;
+}
+
+#archive_title{
+    background: var(--primary);
+    color: white;
+    padding: 20px 0px !important;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 75vh;
 }

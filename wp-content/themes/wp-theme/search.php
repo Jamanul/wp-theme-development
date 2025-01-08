@@ -1,5 +1,5 @@
 <?php
-// this template is for displaying archive pages
+// this template is for displaying search pages
 get_header();
 ?>
 <main>
@@ -9,8 +9,7 @@ get_header();
                 <div class="col-md-9">
                     <div id="archive_title">
                         <?php
-                        the_archive_title("<h1 class='title'", "</h1>");
-                        the_archive_description("<div class='description'", "</div>");
+                        printf(__("Search Result For : %s", "sakib"), get_search_query());
                         ?>
                     </div>
                     <?php get_template_part("template_part/blog_setup"); ?>

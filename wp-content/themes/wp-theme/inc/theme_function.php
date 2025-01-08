@@ -53,5 +53,47 @@ function skb_customize_register($wp_customize)
         'setting' => 'skb_footer_add',
         'section' => 'skb_footer_section',
     ));
+
+    $wp_customize->add_section("skb_colors", array(
+        "title" => __("Color section", "sakib"),
+        'description' => __('If you are interested, you can change the footer here.', 'sakib'),
+    ));
+    $wp_customize->add_setting("skb_bg_color_add", array(
+        "default" => "#fff",
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, "skb_bg_color_add", array(
+        "label" => __("Background colors", "sakib"),
+        "settings" => "skb_bg_color_add",
+        "section" => "skb_colors"
+    )));
+    $wp_customize->add_setting("skb_primary_color_add", array(
+        "default" => "tomato",
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, "skb_primary_color_add", array(
+        "label" => __("Primary colors", "sakib"),
+        "settings" => "skb_primary_color_add",
+        "section" => "skb_colors"
+    )));
 }
 add_action('customize_register', 'skb_customize_register');
+
+function skb_theme_color_cus()
+{
+    ?>
+    <style>
+        body {
+            background:
+                <?php echo get_theme_mod("skb_bg_color_add"); ?>
+            ;
+        }
+
+        :root {
+            --primary:
+                <?php echo get_theme_mod("skb_primary_color_add"); ?>
+        }
+    </style>
+    <?php
+}
+add_action("wp_head", "skb_theme_color_cus");
+
+
