@@ -9,7 +9,8 @@ include_once(get_template_directory() . '/inc/enqueue.php');  // CSS and JS enqu
 include_once(get_template_directory() . '/inc/theme_function.php');  // Theme customization functions
 include_once(get_template_directory() . '/inc/menu_register.php');  // Menu registration
 include_once(get_template_directory() . '/inc/widget_register.php');  // widget registration
-include_once(get_template_directory() . '/inc/custom_post.php');  // widget registration
+include_once(get_template_directory() . '/inc/custom_post.php');
+include_once(get_template_directory() . '/inc/short_code.php');
 
 
 
