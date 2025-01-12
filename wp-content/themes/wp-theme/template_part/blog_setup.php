@@ -5,7 +5,15 @@ if (have_posts()):
         ?>
         <div class="blog_area">
             <!-- Display post title -->
-            <h2 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+            <h2 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                <p>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <?php echo get_the_date(); ?>
+                    <span>At</span>
+                    <i class="fa-solid fa-clock"></i>
+                    <?php echo get_the_time(); ?>
+                </p>
+            </h2>
             <div class="post_thumb">
                 <a href="<?php the_permalink() ?>">
                     <?php echo the_post_thumbnail("custom_post_thumbnail"); ?></a>

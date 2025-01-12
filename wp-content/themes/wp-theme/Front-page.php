@@ -12,6 +12,16 @@
                         <div class="service-content">
                             <h2><?php echo the_title() ?></h2>
                             <?php echo the_post_thumbnail('service') ?>
+                            <?php $price = get_post_meta(get_the_ID(), '_service_price', true);
+                            $rating = get_post_meta(get_the_ID(), '_service_rating', true);
+
+                            if ($price) {
+                                echo '<p><strong>Price:</strong> ' . esc_html($price) . '</p>';
+                            }
+
+                            if ($rating) {
+                                echo '<p><strong>Rating:</strong> ' . esc_html($rating) . ' / 5</p>';
+                            } ?>
                             <?php echo the_excerpt() ?>
                         </div>
                     </div>
