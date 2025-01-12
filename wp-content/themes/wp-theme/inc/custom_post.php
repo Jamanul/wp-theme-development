@@ -19,6 +19,7 @@ function custom_service()
         "menu_position" => 5,
         "has_archive" => true,
         "show_ui" => true,
+        "taxonomies" => array('category'),
         "capability_type" => "post",
         "rewrite" => array("slug" => "service"),
         "supports" => array("title", "thumbnail", "editor"),
@@ -32,3 +33,19 @@ add_theme_support("post-thumbnails");
 
 // Enable post thumbnails specifically for 'post', 'page', and 'service'
 add_theme_support("post-thumbnails", array('post', 'page', 'service'));
+
+
+function custom_service_catgegory_post($query)
+{
+    if (is_category()) {
+        $post_type = get_query_var('post_type');
+        if ($post_type) {
+            $post_type = $post_type;
+        } else {
+            $post_type = array("post", "service");
+            $query->set('post_type', $post_type);
+            return $query;
+        }
+    }
+}
+add_filter('pre_get_posts', 'custom_service_catgegory_post');
